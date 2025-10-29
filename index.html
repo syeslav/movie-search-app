@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск фильмов</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Поиск фильмов</h1>
+            <p>Найдите информацию о любом фильме, сериале или эпизоде</p>
+        </header>
+        
+        <div class="search-form">
+            <div class="form-group">
+                <label for="search-input">Название фильма</label>
+                <input type="text" id="search-input" placeholder="Введите название фильма или его часть">
+            </div>
+            
+            <div class="form-group">
+                <label for="type-select">Тип контента</label>
+                <select id="type-select">
+                    <option value="">Все типы</option>
+                    <option value="movie">Фильм</option>
+                    <option value="series">Сериал</option>
+                    <option value="episode">Эпизод</option>
+                </select>
+            </div>
+            
+            <button class="search-btn" id="search-btn">Поиск</button>
+        </div>
+        
+        <div class="loading" id="loading">
+            <p>Загрузка...</p>
+        </div>
+        
+        <div class="results-container" id="results-container">
+            <div id="movie-results"></div>
+            <div class="pagination" id="pagination"></div>
+        </div>
+        
+        <div class="movie-details" id="movie-details"></div>
+    </div>
+
+    <script src="js/search.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/pagination.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
